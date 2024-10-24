@@ -8,8 +8,13 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         sb.append("CardSuit Suits:\n");
 
-        Arrays.stream(Suit.values()).forEach(e -> sb.append("Ordinal value: ").append((e.ordinal()))
-                                        .append("; Name value: ").append(e.name()).append("\n"));
+        Arrays.stream(Suit.values())
+                .forEach(e -> sb.append("Ordinal value: ")
+                        .append((e.ordinal()))
+                        .append("; Name value: ")
+                        .append(e.name())
+                        .append("\n"));
+
 
         System.out.println(sb);
     }
