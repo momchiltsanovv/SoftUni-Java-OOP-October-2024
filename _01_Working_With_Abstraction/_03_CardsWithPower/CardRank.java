@@ -1,4 +1,4 @@
-package _01_WorkingWithAbstraction._03_CardsWithPower;
+package _03_CardsWithPower;
 
 public enum CardRank {
 

@@ -1,4 +1,4 @@
-package _01_WorkingWithAbstraction._01_CardSuit;
+package _01_CardSuit;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package _01_WorkingWithAbstraction._02_CardRank;
+package _02_CardRank;
 
 
 import java.util.Arrays;

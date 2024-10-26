@@ -1,4 +1,4 @@
-package _01_WorkingWithAbstraction._05_JediGalaxy;
+package _05_JediGalaxy;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package _01_WorkingWithAbstraction._04_TrafficLights;
+package _04_TrafficLights;
 
 public enum TrafficLight {
     RED,
