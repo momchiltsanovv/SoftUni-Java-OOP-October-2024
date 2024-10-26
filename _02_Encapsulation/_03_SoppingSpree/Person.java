@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
+
+    private final List<Product> products;
     private String name;
     private double money;
-    private final List<Product> products;
-
 
     public Person(String name, double money) {
         setName(name);
         setMoney(money);
         this.products = new ArrayList<>();
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     private void setName(String name) {
@@ -30,30 +34,25 @@ public class Person {
     }
 
     public void buyProduct(Product product) {
-        if (product.getCost() > this.money) {
-            System.out.printf("%s can't afford %s\n", this.name, product.getName());
-            return;
+        if (product.getCost() > money) {
+            String message = "%s can't afford %s%n".formatted(this.getName(), product.getName());
+            throw new IllegalArgumentException(message);
         }
         this.products.add(product);
         this.money -= product.getCost();
         System.out.printf("%s bought %s\n", this.name, product.getName());
     }
 
-    public String getName() {
-        return this.name;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.name).append(" - ");
-        if(!products.isEmpty()) {
+        if (!products.isEmpty()) {
             products.forEach(product -> sb.append(product.getName()).append(", "));
             sb.setLength(sb.length() - 2);
         } else {
             sb.append("Nothing bought");
         }
-
 
         return sb.toString();
     }

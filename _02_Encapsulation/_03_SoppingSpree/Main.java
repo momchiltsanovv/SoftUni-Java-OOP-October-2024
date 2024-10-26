@@ -1,27 +1,32 @@
 package _03_SoppingSpree;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Map<String, Person> persons = new HashMap<>();
-        String[] tokensPersons = sc.nextLine().split(";");
-        for (String token : tokensPersons) {
-            String[] parts = token.split("=");
-            String personName = parts[0];
-            double personMoney = Double.parseDouble(parts[1]);
-            persons.put(personName, new Person(personName, personMoney));
+        List<Person> people = new ArrayList<>();
+
+        String[] firstLine = sc.nextLine().split(";");
+        for (String token : firstLine) {
+            String name = token.split("=")[0];
+            double money = Double.parseDouble(token.split("=")[1]);
+            Person person = new Person(name, money);
+            people.add(person);
         }
 
-        Map<String, Product> products = new HashMap<>();
-        String[] tokensProducts = sc.nextLine().split(";");
-        for (String token : tokensProducts) {
-            String[] parts = token.split("=");
-            String productName = parts[0];
-            double productCost = Double.parseDouble(parts[1]);
-            products.put(productName, new Product(productName, productCost));
+        List<Product> products = new ArrayList<>();
+
+        String[] secondLine = sc.nextLine().split(";");
+        for (String token : secondLine) {
+            String name = token.split("=")[0];
+            double cost = Double.parseDouble(token.split("=")[1]);
+            Product product = new Product(name, cost);
+            products.add(product);
         }
 
         List<Person> list = new LinkedList<>();
@@ -30,14 +35,24 @@ public class Main {
             String personName = input[0];
             String productName = input[1];
 
-            Person person = persons.get(personName);
-            Product product = products.get(productName);
+            Person person = people.stream()
+                    .filter(person1 -> person1.getName().equals(personName))
+                    .findFirst()
+                    .orElse(null);
 
-            person.buyProduct(product);
+            Product product = products.stream()
+                    .filter(product1 -> product1.getName().equals(productName))
+                    .findFirst()
+                    .orElse(null);
+
+            if (person != null && product != null) {
+                person.buyProduct(product);
+            }
 
             if (!list.contains(person)) {
                 list.add(person);
             }
+
             input = sc.nextLine().split("\\s+");
         }
 
