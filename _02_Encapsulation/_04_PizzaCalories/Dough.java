@@ -12,7 +12,6 @@ public class Dough {
         setWeight(weight);
     }
 
-
     private void setWeight(double weight) {
         if (weight < 1 || weight > 200) {
             throw new IllegalArgumentException("Dough weight should be in the range [1..200].");
@@ -52,7 +51,6 @@ public class Dough {
         } else {
             typeBakingTechnique = 1.0;
         }
-
         return 2 * this.weight * typeFlour * typeBakingTechnique;
     }
 

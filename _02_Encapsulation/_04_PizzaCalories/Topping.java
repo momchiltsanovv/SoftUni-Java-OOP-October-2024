@@ -4,7 +4,6 @@ public class Topping {
     private String toppingType;
     private double weight;
 
-
     public Topping(String toppingType, double weight) {
         this.setToppingType(toppingType);
         this.setWeight(weight);
@@ -30,7 +29,6 @@ public class Topping {
         this.weight = weight;
     }
 
-
     public double calculateCalories() {
         double type;
         if(toppingType.equalsIgnoreCase("veggies")) {
@@ -42,7 +40,6 @@ public class Topping {
         } else {
             type = 1.2;
         }
-
         return 2 * this.weight * type;
     }
 
