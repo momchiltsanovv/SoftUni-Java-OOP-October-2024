@@ -1,4 +1,4 @@
-package _02_Zoo;
+package needForSpeed;
 
 import java.util.Scanner;
 
@@ -9,4 +9,8 @@ public class Main {
 
 
     }
+
+
+
+
 }

@@ -1,4 +1,4 @@
-package _02_Zoo;
+package zoo;
 
 public class Reptile extends Animal {
 

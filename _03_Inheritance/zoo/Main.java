@@ -1,4 +1,4 @@
-package _04_NeedForSpeed;
+package zoo;
 
 import java.util.Scanner;
 
@@ -9,8 +9,4 @@ public class Main {
 
 
     }
-
-
-
-
 }

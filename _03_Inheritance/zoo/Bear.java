@@ -1,4 +1,4 @@
-package _02_Zoo;
+package zoo;
 
 public class Bear extends Mammal{
     public Bear(String name) {
