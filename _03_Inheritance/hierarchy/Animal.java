@@ -48,7 +48,10 @@ public class Animal {
     }
 
 
-    public String produceSound() {return "";}
+    public String produceSound() {
+        return "";
+    }
+
 
     @Override
     public String toString() {
@@ -60,6 +63,7 @@ public class Animal {
                              this.name,
                              this.age,
                              this.gender,
-                             this.produceSound());
+                             this.produceSound()
+                            );
     }
 }
