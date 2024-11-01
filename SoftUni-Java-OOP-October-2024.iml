@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/_02_Encapsulation" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/_03_Inheritance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_04_InterfacesAndAbstraction" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
