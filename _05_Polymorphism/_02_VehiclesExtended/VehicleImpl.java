@@ -18,7 +18,7 @@ public abstract class VehicleImpl implements Vehicle {
     public String drive(double distance) {
         DecimalFormat df = new DecimalFormat("#.##");
 
-        
+
         double neededFuel = this.fuelConsumption * distance;
 
         String result = "%s needs refueling".formatted(this.getClass().getSimpleName());
