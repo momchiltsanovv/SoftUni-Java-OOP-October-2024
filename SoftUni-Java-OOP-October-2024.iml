@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/_03_Inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/_04_InterfacesAndAbstraction" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/_05_Polymorphism" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_06_RegularExam10August2024" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
