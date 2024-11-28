@@ -4,9 +4,9 @@ import java.text.DecimalFormat;
 
 public abstract class VehicleImpl implements Vehicle {
 
+    private final double tankCapacity;
     private double fuelQuantity;
     private double fuelConsumption;
-    private final double tankCapacity;
 
     public VehicleImpl(double fuelQuantity, double fuelConsumption, double tankCapacity) {
         this.fuelQuantity = fuelQuantity;
@@ -44,7 +44,6 @@ public abstract class VehicleImpl implements Vehicle {
         if (this.fuelQuantity + liters > this.tankCapacity) {
             throw new IllegalArgumentException("Cannot fit fuel in tank");
         }
-
         this.fuelQuantity += liters;
     }
 
