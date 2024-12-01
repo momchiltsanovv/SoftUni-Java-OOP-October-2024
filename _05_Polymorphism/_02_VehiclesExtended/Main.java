@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
         String[] tokens = scanner.nextLine().split("\\s+");
 
         VehicleImpl car = new Car(Double.parseDouble(tokens[1]),
@@ -29,11 +28,9 @@ public class Main {
         Map<String, VehicleImpl> vehicleMap = Map.of("Car", car,
                                                      "Truck", truck,
                                                      "Bus", bus);
-
         int n = Integer.parseInt(scanner.nextLine());
 
         for (int i = 0; i < n; i++) {
-
             tokens = scanner.nextLine().split("\\s+");
             try {
                 VehicleImpl vehicle = vehicleMap.get(tokens[1]);
@@ -55,7 +52,6 @@ public class Main {
                 System.out.println(ex.getMessage());
             }
         }
-
         System.out.println(car);
         System.out.println(truck);
         System.out.println(bus);
